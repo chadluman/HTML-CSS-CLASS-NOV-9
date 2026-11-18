@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A hands-on showcase of Bootstrap 6 components, utilities, and interactive plugins.">
+    <title>Bootstrap 6 Component Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar md:navbar-expand bg-primary" data-bs-theme="dark" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#overview">Bootstrap Lab</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <dialog class="drawer drawer-end bg-primary" tabindex="-1" id="siteNavigation" aria-labelledby="siteNavigationLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="siteNavigationLabel">Explore the showcase</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close navigation"></button>
+          </div>
+          <div class="drawer-body">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#overview">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#foundations">Components</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#interactions">Interactions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#forms">Forms</a>
+              </li>
+            </ul>
+            <div class="form-field mt-3 md:mt-0">
+              <div class="switch theme-warning">
+                <input type="checkbox" id="themeSwitch" role="switch" switch>
+              </div>
+              <label for="themeSwitch">Dark mode</label>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </nav>
+
+    <main>
+      <section class="bg-1 border-bottom py-5" id="overview">
+        <div class="container py-4">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#overview">Home</a></li>
+              <li class="breadcrumb-divider"></li>
+              <li class="breadcrumb-item" aria-current="page"><a class="breadcrumb-link active" href="#overview">Component showcase</a></li>
+            </ol>
+          </nav>
+          <div class="row align-items-center g-5">
+            <div class="lg:col-7">
+              <span class="badge badge-subtle theme-primary mb-3">Built with Bootstrap 6 alpha</span>
+              <h1 class="display-3 fw-bold mb-3">One page. A whole lot of Bootstrap.</h1>
+              <p class="lead fg-2 mb-4">Explore responsive layout, theme-aware components, accessible forms, and interactive JavaScript plugins—all running from the Bootstrap package installed in this project.</p>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a class="btn-solid theme-primary btn-lg" href="#foundations">Explore components</a>
+                <button class="btn-outline theme-secondary btn-lg" type="button" data-bs-toggle="dialog" data-bs-target="#componentDialog">Open a dialog</button>
+              </div>
+              <div class="d-flex flex-wrap gap-2" aria-label="Featured capabilities">
+                <span class="badge badge-outline theme-primary">Responsive grid</span>
+                <span class="badge badge-outline theme-success">Accessible controls</span>
+                <span class="badge badge-outline theme-accent">Color modes</span>
+                <span class="badge badge-outline theme-info">ES modules</span>
+              </div>
+            </div>
+            <div class="lg:col-5">
+              <article class="card shadow-lg">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <strong>Project snapshot</strong>
+                  <span class="badge theme-success">Running</span>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3 text-center mb-4">
+                    <div class="col-4">
+                      <div class="bg-2 rounded p-3">
+                        <div class="fs-3 fw-bold">12+</div>
+                        <small class="fg-2">Components</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="bg-2 rounded p-3">
+                        <div class="fs-3 fw-bold">4</div>
+                        <small class="fg-2">Themes</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="bg-2 rounded p-3">
+                        <div class="fs-3 fw-bold">100%</div>
+                        <small class="fg-2">Responsive</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span>Showcase completion</span>
+                    <strong>86%</strong>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Showcase completion" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated theme-primary" style="width: 86%">86%</div>
+                  </div>
+                </div>
+                <div class="card-footer fg-2">Compiled locally with Sass and PostCSS</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="foundations">
+        <div class="container">
+          <div class="mb-5">
+            <span class="badge badge-subtle theme-accent mb-2">Foundations</span>
+            <h2 class="display-5 mb-2">Theme-aware building blocks</h2>
+            <p class="lead fg-2 mb-0">The same semantic theme classes recolor buttons, badges, alerts, progress bars, and more.</p>
+          </div>
+
+          <div class="row row-cols-1 lg:row-cols-3 g-4">
+            <div class="col">
+              <article class="card h-100 hover-lift">
+                <div class="card-header">Buttons and badges</div>
+                <div class="card-body">
+                  <h3 class="card-title h4">Four button treatments</h3>
+                  <p class="card-text fg-2">Combine a treatment with any theme color instead of memorizing a class for every combination.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <button class="btn-solid theme-primary" type="button">Solid</button>
+                    <button class="btn-outline theme-primary" type="button">Outline</button>
+                    <button class="btn-subtle theme-primary" type="button">Subtle</button>
+                    <button class="btn-text theme-primary" type="button">Text</button>
+                  </div>
+                  <hr>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge theme-primary">Primary</span>
+                    <span class="badge badge-subtle theme-success">Success</span>
+                    <span class="badge badge-outline theme-warning">Warning</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card h-100 hover-lift">
+                <div class="card-header">Alerts and feedback</div>
+                <div class="card-body">
+                  <h3 class="card-title h4">Context that adapts</h3>
+                  <p class="card-text fg-2">Alerts communicate meaning through both color and readable text.</p>
+                  <div class="alert theme-success" role="status">
+                    <p><strong>Success:</strong> Your Sass build completed.</p>
+                  </div>
+                  <div class="alert theme-warning" role="alert">
+                    <p><strong>Heads up:</strong> Bootstrap 6 is currently alpha.</p>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Dismiss warning"></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card h-100 hover-lift">
+                <div class="card-header">Progress and loading</div>
+                <div class="card-body">
+                  <h3 class="card-title h4">Visible system status</h3>
+                  <p class="card-text fg-2">Progress bars and spinners give users immediate feedback.</p>
+                  <div class="vstack gap-3">
+                    <div>
+                      <div class="d-flex justify-content-between mb-2"><span>HTML</span><span>92%</span></div>
+                      <div class="progress" role="progressbar" aria-label="HTML progress" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar theme-danger" style="width: 92%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between mb-2"><span>Sass</span><span>78%</span></div>
+                      <div class="progress" role="progressbar" aria-label="Sass progress" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar theme-accent" style="width: 78%"></div>
+                      </div>
+                    </div>
+                    <button class="btn-subtle theme-primary align-self-start" type="button" disabled>
+                      <span class="spinner-border" aria-hidden="true"></span>
+                      <span role="status">Compiling…</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-1 border-top border-bottom py-5" id="interactions">
+        <div class="container">
+          <div class="mb-5">
+            <span class="badge badge-subtle theme-info mb-2">Interactions</span>
+            <h2 class="display-5 mb-2">Components that respond</h2>
+            <p class="lead fg-2 mb-0">These examples use Bootstrap’s bundled JavaScript and accessible native browser elements.</p>
+          </div>
+
+          <div class="row g-4 mb-4">
+            <div class="lg:col-7">
+              <article class="card h-100">
+                <div class="card-header">Tabs</div>
+                <div class="card-body">
+                  <ul class="nav nav-pills" id="showcaseTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="layout-tab" data-bs-toggle="tab" data-bs-target="#layout-pane" type="button" role="tab" aria-controls="layout-pane" aria-selected="true">Layout</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="theme-tab" data-bs-toggle="tab" data-bs-target="#theme-pane" type="button" role="tab" aria-controls="theme-pane" aria-selected="false">Themes</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="utility-tab" data-bs-toggle="tab" data-bs-target="#utility-pane" type="button" role="tab" aria-controls="utility-pane" aria-selected="false">Utilities</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content pt-4" id="showcaseTabContent">
+                    <div class="tab-pane show active" id="layout-pane" role="tabpanel" aria-labelledby="layout-tab" tabindex="0">
+                      <h3 class="h4">Responsive by design</h3>
+                      <p class="fg-2">Bootstrap’s mobile-first grid changes this page from single-column cards to multi-column layouts at larger container sizes.</p>
+                      <div class="row g-2 text-center">
+                        <div class="sm:col-4"><div class="bg-2 rounded p-3">Column 1</div></div>
+                        <div class="sm:col-4"><div class="bg-2 rounded p-3">Column 2</div></div>
+                        <div class="sm:col-4"><div class="bg-2 rounded p-3">Column 3</div></div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="theme-pane" role="tabpanel" aria-labelledby="theme-tab" tabindex="0">
+                      <h3 class="h4">Composable theme colors</h3>
+                      <p class="fg-2">Add one <code>.theme-*</code> class to recolor many different components. Try the dark-mode switch in the navbar too.</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="badge theme-primary">Primary</span>
+                        <span class="badge theme-accent">Accent</span>
+                        <span class="badge theme-success">Success</span>
+                        <span class="badge theme-danger">Danger</span>
+                        <span class="badge theme-warning">Warning</span>
+                        <span class="badge theme-info">Info</span>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="utility-pane" role="tabpanel" aria-labelledby="utility-tab" tabindex="0">
+                      <h3 class="h4">Small classes, fast layouts</h3>
+                      <p class="fg-2 mb-0">Spacing, flex, grid, borders, shadows, colors, sizing, and responsive variants compose directly in the markup.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="lg:col-5">
+              <article class="card h-100">
+                <div class="card-header">Overlays and actions</div>
+                <div class="card-body">
+                  <h3 class="card-title h4">Try the JavaScript plugins</h3>
+                  <p class="card-text fg-2">Open a native dialog, show a toast, reveal a tooltip, or use a Floating UI-powered menu.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <button class="btn-solid theme-primary" type="button" data-bs-toggle="dialog" data-bs-target="#componentDialog">Dialog</button>
+                    <button class="btn-outline theme-success" type="button" id="liveToastBtn">Toast</button>
+                    <button class="btn-subtle theme-info" type="button" data-bs-toggle="tooltip" data-bs-title="Tooltips work with mouse, keyboard, and touch.">Tooltip</button>
+                    <div>
+                      <button class="btn-outline theme-accent" type="button" data-bs-toggle="menu" aria-expanded="false">Menu</button>
+                      <div class="menu">
+                        <button class="menu-item" type="button">New project</button>
+                        <button class="menu-item" type="button">Duplicate</button>
+                        <hr class="menu-divider">
+                        <button class="menu-item" type="button">Archive</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <article class="card">
+            <div class="card-header">Native accordion</div>
+            <div class="card-body">
+              <div class="accordion" id="componentAccordion">
+                <details class="accordion-item" name="componentShowcase" open>
+                  <summary class="accordion-header">
+                    Why use Bootstrap’s grid?
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 5 6 6 6-6"/></svg>
+                  </summary>
+                  <div class="accordion-body">It provides responsive containers, rows, columns, gutters, and container-query variants without writing layout CSS for every page.</div>
+                </details>
+                <details class="accordion-item" name="componentShowcase">
+                  <summary class="accordion-header">
+                    What changed in Bootstrap 6?
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 5 6 6 6-6"/></svg>
+                  </summary>
+                  <div class="accordion-body">Bootstrap 6 adds composable theme classes, native dialog and drawer components, modern Sass modules, and expanded form controls.</div>
+                </details>
+                <details class="accordion-item" name="componentShowcase">
+                  <summary class="accordion-header">
+                    Does this accordion need JavaScript?
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 5 6 6 6-6"/></svg>
+                  </summary>
+                  <div class="accordion-body">No. Bootstrap 6 styles native <code>&lt;details&gt;</code> elements, and the shared <code>name</code> attribute provides exclusive open-and-close behavior.</div>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-5" id="forms">
+        <div class="container">
+          <div class="mb-5">
+            <span class="badge badge-subtle theme-success mb-2">Forms</span>
+            <h2 class="display-5 mb-2">Consistent controls and validation-ready markup</h2>
+            <p class="lead fg-2 mb-0">Form controls inherit the same spacing, focus, color-mode, and accessibility system as the rest of the page.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="lg:col-8">
+              <article class="card">
+                <div class="card-header">Project inquiry</div>
+                <div class="card-body">
+                  <form id="demoForm">
+                    <div class="row g-3 mb-3">
+                      <div class="md:col-6">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control" type="text" id="name" placeholder="Ada Lovelace" required>
+                      </div>
+                      <div class="md:col-6">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email" id="email" placeholder="ada@example.com" aria-describedby="emailHelp" required>
+                        <div class="form-text" id="emailHelp">This demo never sends or stores your information.</div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="projectType">Project type</label>
+                      <select class="form-control" id="projectType">
+                        <option>Landing page</option>
+                        <option>Portfolio</option>
+                        <option>Dashboard</option>
+                        <option>Online store</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="message">What would you like to build?</label>
+                      <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your idea"></textarea>
+                    </div>
+                    <div class="form-field mb-4">
+                      <label class="form-label" for="rangeBudget">Prototype budget</label>
+                      <div class="form-range theme-primary" data-bs-bubble>
+                        <input type="range" class="form-range-input" min="500" max="5000" step="500" value="2500" id="rangeBudget">
+                      </div>
+                      <small class="form-text">Drag the Bootstrap 6 range to update its value bubble.</small>
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                      <div class="form-field">
+                        <div class="switch theme-primary">
+                          <input type="checkbox" id="updatesSwitch" role="switch" switch checked>
+                        </div>
+                        <label for="updatesSwitch">Send project updates</label>
+                      </div>
+                      <button class="btn-solid theme-primary" type="submit">Submit demo form</button>
+                    </div>
+                  </form>
+                </div>
+              </article>
+            </div>
+
+            <div class="lg:col-4">
+              <aside class="card h-100">
+                <div class="card-header">What this form demonstrates</div>
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item">
+                    <strong class="d-block">Responsive layout</strong>
+                    <small class="fg-2">Fields stack on small screens and share a row on larger ones.</small>
+                  </div>
+                  <div class="list-group-item">
+                    <strong class="d-block">Purposeful input types</strong>
+                    <small class="fg-2">Email, text, select, textarea, range, and switch controls.</small>
+                  </div>
+                  <div class="list-group-item">
+                    <strong class="d-block">Accessible labels</strong>
+                    <small class="fg-2">Every control has a visible label and meaningful helper text.</small>
+                  </div>
+                  <div class="list-group-item">
+                    <strong class="d-block">Color-mode support</strong>
+                    <small class="fg-2">All controls adapt when dark mode is enabled.</small>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-1 border-top py-4">
+      <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span>Bootstrap 6 component showcase</span>
+        <span class="fg-2">Built with npm, Sass, and accessible HTML</span>
+      </div>
+    </footer>
+
+    <dialog class="dialog" id="componentDialog" aria-labelledby="componentDialogLabel">
+      <div class="dialog-header">
+        <h2 class="dialog-title" id="componentDialogLabel">A native Bootstrap dialog</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close dialog"></button>
+      </div>
+      <div class="dialog-body">
+        <p>Bootstrap 6 styles the browser’s native <code>&lt;dialog&gt;</code> element and adds a consistent data API, transitions, backdrop behavior, and focus management.</p>
+        <div class="alert theme-info mb-0" role="status">
+          <p>This dialog is keyboard accessible. Press <kbd>Esc</kbd> or use a close button to dismiss it.</p>
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <button type="button" class="btn-subtle theme-secondary" data-bs-dismiss="dialog">Close</button>
+        <button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">Got it</button>
+      </div>
+    </dialog>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="toast theme-primary" id="liveToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+          <span class="badge theme-primary me-2">BS</span>
+          <strong class="me-auto">Bootstrap Lab</strong>
+          <small class="fg-2">just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close notification"></button>
+        </div>
+        <div class="toast-body" id="toastMessage">The Bootstrap toast plugin is working.</div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
